@@ -1,0 +1,271 @@
+/**
+ * Created by xiaogang on 2018/8/1.
+ *
+ */
+@import "./common/base";
+@import "md";
+
+//ui demos style
+html {
+  font-size: 50px;
+}
+
+body {
+  font-size: initial;
+}
+
+.render {
+  position: relative;
+  max-width: 7.5rem;
+  margin: 0 auto;
+  //min-height: 4rem;
+}
+
+//pages style
+.mobile_bar {
+  display: none;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  /* height: 40px; */
+  line-height: 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+iframe {
+  width: 100%;
+  height: 591px;
+  background-color: #fff;
+
+  //border-width: 0;
+  border: none;
+}
+
+@page-nav-width: 200px;
+.content {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.nav {
+  height: 100%;
+  overflow: auto;
+  width: @page-nav-width;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+
+  a {
+    font-size: 17px;
+    color: #333;
+    line-height: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    transition: all .3s;
+    font-weight: bold;
+
+    &.item {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      padding-left: 24px;
+      color: #666
+    }
+    &.component_name {
+      font-size: 15px;
+      color: #333;
+      padding-left: 8px;
+      line-height: 26px;
+      margin-top: 10px;
+      &:before {
+        //content:'';
+        //width:2px;
+        //height: 20px;
+        //background-color: #ccc;
+      }
+    }
+    &.active {
+      color: #20a0ff;
+    }
+  }
+
+  .component_group {
+
+  }
+
+}
+
+.page {
+  padding: 30px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  margin-left: @page-nav-width;
+  margin-right: @page-nav-width*2;
+
+  .md();
+}
+
+.demos {
+  //padding-top: 40px;
+  height: 100%;
+  width: @page-nav-width*2;
+  float: right;
+  .phone {
+    margin: 20px 20px 0;
+    background-image: url(./img/phone.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    padding: 100px 16px;
+    box-sizing: border-box;
+    width: 365px;
+  }
+}
+
+//for pc
+//(1080 高清显示器)
+@media screen and (max-height: 800px) {
+  .phone {
+    position: relative;
+    top: -20px;
+  }
+
+  iframe {
+    position: relative;
+    top: 0;
+  }
+}
+
+//1680*1050 (半高清显示器)
+@media screen and (max-height: 750px) {
+  .phone {
+    position: relative;
+    top: -20px;
+  }
+
+  iframe {
+    position: relative;
+    top: -20px;
+  }
+}
+
+//mac book
+@media screen and (max-height: 710px) {
+  .phone {
+    position: relative;
+    top: -20px;
+  }
+
+  iframe {
+    position: relative;
+    top: -40px;
+  }
+}
+
+//1366 * 768 （标准 电脑 显示器）
+@media screen and (max-height: 670px) {
+  .phone {
+    position: relative;
+    top: -20px;
+  }
+
+  iframe {
+    position: relative;
+    top: -60px;
+  }
+}
+
+//for pad
+@media screen and (max-width: 900px) {
+  .demos {
+    display: none;
+  }
+
+  .page {
+    margin-right: 0;
+  }
+
+}
+
+//for phone
+@media screen and (max-width: 500px) {
+  .mobile_bar {
+    display: block;
+  }
+
+  .nav {
+    &.open {
+      display: block;
+
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    //需要配合 可以执行的过渡属性使用
+    transition: all 0.6s cubic-bezier(0.4, 0, 0, 1);
+    //display: none;
+    -webkit-transform: translate(-@page-nav-width, 0);
+    transform: translate(-@page-nav-width, 0);
+
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 10;
+    background-color: #f9f9f9;
+    &.switch_demos {
+      display: none;
+    }
+
+  }
+
+  .page {
+    display: block;
+    //overflow: initial; //auto
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 50px;
+
+    &.switch_demos {
+      display: none;
+    }
+  }
+
+  .demos {
+    display: none;
+
+    &.switch_demos {
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      .phone {
+        margin: 0;
+        background: none;
+        background-size: 100%;
+        height: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+

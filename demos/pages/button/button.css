@@ -1,0 +1,180 @@
+/**
+* default-
+* 页面的变量 page- 前缀
+*/
+/*mutiline line-height=1.5*font-size
+* 多行文本 常用的 14 是否考虑直接 写到common.less 中
+*/
+/***
+   公共尺寸 : size (width,height,line-height,font-size,radius)
+***/
+#root {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+#root .clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+#root .clearfix {
+  zoom: 1;
+}
+#root .btn-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+#root .btn-item h2 {
+  margin-bottom: 10px;
+}
+#root .up-button {
+  border-radius: 0.24rem;
+  outline: none;
+  border: 1px solid #ffffff;
+  font-size: 0.28rem;
+  letter-spacing: 0.035rem;
+  cursor: pointer;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin-right: 10px;
+}
+#root .up-button.button-l {
+  width: 2.28rem;
+  height: 0.72rem;
+  line-height: 0.72rem;
+}
+#root .up-button.button-s {
+  width: 1.2rem;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  background-color: #ffffff;
+  font-size: 0.24rem;
+  border-radius: 0.18rem;
+  color: #ed171f;
+}
+#root .up-button.button-danger {
+  background-color: #ed171f;
+  border: 1px solid #ed171f;
+  color: #ffffff;
+}
+#root .up-button.button-danger i {
+  font-size: 0.4rem;
+  vertical-align: -0.06rem;
+}
+#root .up-button.button-danger:active {
+  background-color: #cf151b;
+  border: 1px solid #cf151b;
+}
+#root .up-button.button-danger.disabled {
+  opacity: 0.3;
+}
+#root .up-button.button-danger-plain {
+  background-color: #ffffff;
+  border: 1px solid #ed171f;
+  color: #ed171f;
+}
+#root .up-button.button-danger-plain i {
+  font-size: 0.4rem;
+  vertical-align: -0.06rem;
+}
+#root .up-button.button-danger-plain:active {
+  border: 1px solid #cf151b;
+  color: #cf151b;
+}
+#root .up-button.button-danger-plain.disabled {
+  opacity: 0.3;
+}
+#root .up-button.button-success {
+  background-color: #00684d;
+  border: 1px solid #00684d;
+  color: #ffffff;
+}
+#root .up-button.button-success:active {
+  background-color: #004a36;
+  border: 1px solid #004a36;
+}
+#root .up-button.button-success.disabled {
+  opacity: 0.3;
+}
+#root .up-button.button-success-plain {
+  background-color: #ffffff;
+  border: 1px solid #00684d;
+  color: #00684d;
+}
+#root .up-button.button-success-plain:active {
+  border: 1px solid #004a36;
+  color: #004a36;
+}
+#root .up-button.button-success-plain.disabled {
+  opacity: 0.3;
+}
+#root .up-button.button-plain {
+  color: #ed171f;
+  background-color: #ffffff;
+}
+#root .up-button.button-plain:active {
+  opacity: 0.7;
+}
+#root .up-button.button-plain.disabled {
+  opacity: 0.3;
+}
+#root .up-button.button-opacity {
+  background: none;
+  color: #ffffff;
+}
+#root .up-button.button-opacity:active {
+  opacity: 0.7;
+}
+#root .up-button.button-opacity.disabled {
+  opacity: 0.3;
+}
+#root .up-button.button-text {
+  font-size: 0.28rem;
+  display: inline-block;
+  width: 1.2rem;
+  height: 0.28rem;
+  line-height: 0.28rem;
+  color: #5a98d2;
+  letter-spacing: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+#root .up-button.button-text:active {
+  color: #4d81b3;
+}
+#root .up-button.button-text.disabled {
+  color: #5a98d2;
+  opacity: 0.3;
+}
+#root .up-button.button-link {
+  width: 1.8rem;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  font-size: 0.28rem;
+  letter-spacing: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: #999999;
+}
+#root .up-button.button-link i {
+  font-size: 0.4rem;
+  vertical-align: -0.06rem;
+}
+#root .up-button.button-link:active {
+  color: #666666;
+}
+#root .up-button.button-link.disabled {
+  color: #cccccc;
+}

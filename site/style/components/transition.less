@@ -1,0 +1,33 @@
+/**
+ * Created by xiaogang on 2018/8/17.
+ *
+ */
+
+@transition-max-height: 1104px;
+
+.transition() {
+
+}
+
+//
+.max-height() {
+  transition: max-height 1s cubic-bezier(0.42, 0, 0.58, 1);
+  overflow: hidden;
+  //max-height:your_max_height;
+  &.open {
+    max-height: @transition-max-height !important;
+  }
+}
+
+//exports styles
+.up-transition() {
+  .transition();
+
+  &.max-height {
+    .max-height();
+  }
+}
+
+.up-transition {
+  .up-transition();
+}

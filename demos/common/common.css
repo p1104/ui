@@ -1,0 +1,31 @@
+pre,
+xmp {
+  overflow: scroll;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.3rem;
+  padding-right: 0.4rem;
+  clear: both;
+}
+body {
+  background-color: #EAEAEA;
+}
+.pre-header {
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.36rem;
+}
+.pre-header .back,
+.pre-header .set,
+.pre-header .text {
+  float: left;
+  width: 15%;
+  height: 100%;
+}
+.pre-header .text {
+  width: 70%;
+}

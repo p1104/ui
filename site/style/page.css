@@ -1,0 +1,412 @@
+/**
+ * Created by xiaogang on 2018/8/1.
+ *
+ */
+/*
+* base.less
+* 功能：通用样式，各项目间的一些基类、常用类等：
+* 要求：
+* 1、媒体查询或者基本dom的样式
+* 2、基础常用类的定义：right\left\hide等
+* 3、项目业务相关的基础类或者通用类：请放到自有项目的common.less中去，通过@import base\common 导入共用的样式
+*/
+/**
+* default-
+* 页面的变量 page- 前缀
+*/
+/*mutiline line-height=1.5*font-size
+* 多行文本 常用的 14 是否考虑直接 写到common.less 中
+*/
+/*
+* dom.less
+* 功能：基本样式，浏览器兼容或者统一浏览器基本样式
+* 基本要求：
+* - 不含任何类名（只存在dom标签）
+* - 只做浏览器间 各dom 标签渲染 的统一性问题
+* - 对于新发现的 样式 统一性问题 最好备注一下手机型号、系统、具体样式等信息
+*/
+html,
+body,
+p,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+textarea {
+  padding: 0;
+  margin: 0;
+}
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img {
+  width: 100%;
+}
+a,
+ul,
+li {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+a:-webkit-any-link {
+  color: inherit;
+}
+input {
+  -webkit-tap-highlight-color: #fff;
+  outline: none;
+  border: none;
+  line-height: 100%;
+  font: inherit;
+  background-color: inherit;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  /* Remove default */
+  -webkit-appearance: none;
+}
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+/**
+*  和项目相关的 标签类设置、
+*/
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+.iconfont {
+  font-size: inherit;
+  display: inline-block;
+}
+/**
+* 基本常用类
+*/
+.right {
+  float: right !important;
+}
+.left {
+  float: left !important;
+}
+.f-bold {
+  font-weight: bold;
+}
+.hide {
+  display: none !important;
+}
+.overflow {
+  overflow: hidden;
+}
+.transform180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.center {
+  text-align: center;
+}
+/**
+ * Created by xiaogang on 2018/8/1.
+ *  md style
+ */
+html {
+  font-size: 50px;
+}
+body {
+  font-size: initial;
+}
+.render {
+  position: relative;
+  max-width: 7.5rem;
+  margin: 0 auto;
+}
+.mobile_bar {
+  display: none;
+  width: 100%;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* height: 40px; */
+  line-height: 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+iframe {
+  width: 100%;
+  height: 591px;
+  background-color: #fff;
+  border: none;
+}
+.content {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.nav {
+  height: 100%;
+  overflow: auto;
+  width: 200px;
+  float: left;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.nav a {
+  font-size: 17px;
+  color: #333;
+  line-height: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+.nav a.item {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 24px;
+  color: #666;
+}
+.nav a.component_name {
+  font-size: 15px;
+  color: #333;
+  padding-left: 8px;
+  line-height: 26px;
+  margin-top: 10px;
+}
+.nav a.active {
+  color: #20a0ff;
+}
+.page {
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  margin-left: 200px;
+  margin-right: 400px;
+}
+.page > p {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #5e6d82;
+}
+.page h3 {
+  font-size: 22px;
+  margin: 45px 0 15px;
+}
+.page h4 {
+  font-size: 20px;
+  margin: 30px 0 5px;
+}
+.page blockquote {
+  border-left: 0.25em solid #f66;
+  color: #6a737d;
+  padding: 0 0.1rem;
+  -webkit-margin-before: 0.1rem;
+          margin-block-start: 0.1rem;
+  -webkit-margin-after: 0.2rem;
+          margin-block-end: 0.2rem;
+  -webkit-margin-start: 0.2rem;
+          margin-inline-start: 0.2rem;
+  -webkit-margin-end: 0.2rem;
+          margin-inline-end: 0.2rem;
+}
+.page table {
+  border-spacing: 0;
+}
+.page table th {
+  background-color: #EFF2F7;
+}
+.page table td,
+.page table th {
+  text-align: center;
+  border-bottom: 1px solid #eaeefb;
+  padding: 10px;
+  max-width: 250px;
+}
+.page .hljs {
+  padding-top: 24px;
+  border-radius: 2px;
+  position: relative;
+}
+.page .hljs:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ccc;
+  text-align: right;
+  font-size: 0.75em;
+  padding: 5px 10px 0;
+  line-height: 15px;
+  height: 15px;
+  font-weight: 600;
+}
+.page .hljs:before {
+  content: "code";
+}
+.page .hljs.html:before {
+  content: "html";
+}
+.page .hljs.xml:before {
+  content: "xml";
+}
+.page .hljs.js:before {
+  content: "js";
+}
+.page .hljs.javascript:before {
+  content: "javascript";
+}
+.page .hljs.bash:before {
+  content: "bash";
+}
+.page .hljs.css:before {
+  content: "css";
+}
+.page .hljs.less:before {
+  content: "less";
+}
+.page .hljs.sass:before {
+  content: "sass";
+}
+.demos {
+  height: 100%;
+  width: 400px;
+  float: right;
+}
+.demos .phone {
+  margin: 20px 20px 0;
+  background-image: url(./img/phone.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%;
+  padding: 100px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 365px;
+}
+@media screen and (max-height: 800px) {
+  .phone {
+    position: relative;
+    top: -20px;
+  }
+  iframe {
+    position: relative;
+    top: 0;
+  }
+}
+@media screen and (max-height: 750px) {
+  .phone {
+    position: relative;
+    top: -20px;
+  }
+  iframe {
+    position: relative;
+    top: -20px;
+  }
+}
+@media screen and (max-height: 710px) {
+  .phone {
+    position: relative;
+    top: -20px;
+  }
+  iframe {
+    position: relative;
+    top: -40px;
+  }
+}
+@media screen and (max-height: 670px) {
+  .phone {
+    position: relative;
+    top: -20px;
+  }
+  iframe {
+    position: relative;
+    top: -60px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .demos {
+    display: none;
+  }
+  .page {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mobile_bar {
+    display: block;
+  }
+  .nav {
+    -webkit-transition: all 0.6s cubic-bezier(0.4, 0, 0, 1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0, 1);
+    -webkit-transform: translate(-200px, 0);
+    transform: translate(-200px, 0);
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 10;
+    background-color: #f9f9f9;
+  }
+  .nav.open {
+    display: block;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav.switch_demos {
+    display: none;
+  }
+  .page {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 50px;
+  }
+  .page.switch_demos {
+    display: none;
+  }
+  .demos {
+    display: none;
+  }
+  .demos.switch_demos {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .demos.switch_demos .phone {
+    margin: 0;
+    background: none;
+    background-size: 100%;
+    height: 100%;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .demos.switch_demos iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

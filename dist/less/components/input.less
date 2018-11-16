@@ -1,0 +1,80 @@
+//1rem*@default-ratio==100px
+@import "../common/vari";
+
+@input-color: #999;
+@input-bgColor: #fff;
+
+//size
+@input-height: 0.6rem*@default-ratio;
+@input-fSize: 0.32rem*@default-ratio;
+@input-radius: 0.06rem*@default-ratio;
+
+/**
+* bgColor:
+* color:
+*
+*/
+.input(@color:@input-color;@bgColor:@input-bgColor;) {
+  //basic style
+  width: 100%;
+  position: relative;
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .iconfont {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    &.right {
+      right: 0;
+    }
+  }
+  //dynamic style
+  color: @color;
+  background-color: @bgColor;
+  //size
+  .input-size();
+}
+
+/**
+* size函数主要
+* height:
+* font-size:
+* radius:
+*
+*/
+@input-height-l: 0.8rem*@default-ratio;
+@input-fSize-l: 0.34rem*@default-ratio;
+@input-radius-l: 0.08rem*@default-ratio;
+//small
+@input-height-s: 0.48rem*@default-ratio;
+@input-fSize-s: 0.3rem*@default-ratio;
+@input-radius-s: 0.06rem*@default-ratio;
+.input-size(@height:@input-height;@fSize:@input-fSize;@radius:@input-radius;) {
+  height: @height;
+  line-height: @height;
+  border-radius: @radius;
+  input {
+    padding-left: @height;
+  }
+  .iconfont {
+    width: @height;
+  }
+}
+
+//exports module
+.ex-input() {
+  .input();
+
+  //override size
+  &.input-l {
+    .input-size(@input-height-l; @input-fSize-l; @input-radius-l;)
+  }
+  &.input-s {
+    .input-size(@input-height-s; @input-fSize-s; @input-radius-s;)
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=EDGE">
+  <meta name="format-detection" content="telephone=no">
+  <title>checkbox</title>
+  <link rel="stylesheet" type="text/css" href="../../../src/iconfont/iconfont.css"/>
+  <!--项目共用样式-->
+  <link rel="stylesheet" type="text/css" href="../../common/common.css"/>
+  <!--页面自实现样式-->
+  <link rel="stylesheet" type="text/css" href="../style/checkbox.css"/>
+
+  <script type="text/javascript" src="../../common/resize.js"></script>
+</head>
+<body>
+<div class="pre-page page-demo" id="page-demo">
+  <div class="pre-header">
+    <span class="back iconfont icon-angle-left" onclick="javascript:history.back();"></span>
+    <p class="text">checkbox</p>
+    <span class="set"></span>
+  </div>
+
+  <div class="check-boxs">
+    <div class="pre-checkbox">
+      <i class="iconfont icon-checkBox"></i>
+      设计
+    </div>
+    <div class="pre-checkbox">
+      <i class="iconfont icon-checkBox"></i>
+      产品
+    </div>
+    <div class="pre-checkbox">
+      <i class="iconfont icon-box"></i>
+      开发
+    </div>
+    <div class="pre-checkbox">
+      <i class="iconfont icon-checkBox"></i>
+      测试
+    </div>
+  </div>
+
+
+  <xmp class="prettyprint" linenums>
+    //使用iconfont图标需要js配合切换选中的样式
+    <div class="pre-checkbox">
+      <i class="iconfont icon-checkBox"></i>
+      设计
+    </div>
+    <div class="pre-checkbox">
+      <i class="iconfont icon-checkBox"></i>
+      产品
+    </div>
+    <div class="pre-checkbox">
+      <i class="iconfont icon-box"></i>
+      开发
+    </div>
+    <div class="pre-checkbox">
+      <i class="iconfont icon-checkBox"></i>
+      测试
+    </div>
+  </xmp>
+
+  <div class="check-boxs">
+    <div class="pre-checkbox">
+      <input id="btn-checkboxId1" class="btn-checkbox-minor" type="checkbox"/>
+      <label for="btn-checkboxId1"></label>
+      <span class="checkbox_title">未选中-标题文字</span>
+    </div>
+    <div class="pre-checkbox">
+      <input id="btn-checkboxId2" class="btn-checkbox-minor" type="checkbox" checked/>
+      <label for="btn-checkboxId2"></label>
+      <span class="checkbox_title">选中-标题文字</span>
+    </div>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="check-boxs">
+      <div class="pre-checkbox">
+        <input id="" class="btn-checkbox" type="checkbox"/>
+        <label for=""></label>
+        <span class="checkbox_title">未选中-标题文字</span>
+      </div>
+      <div class="pre-checkbox">
+        <input id="" class="btn-checkbox" type="checkbox" checked/>
+        <label for=""></label>
+        <span class="checkbox_title">选中-标题文字</span>
+      </div>
+    </div>
+  </xmp>
+
+  <div class="check-boxs">
+    <div class="pre-checkbox">
+      <input id="btn-checkboxId3" class="btn-checkbox" type="checkbox"/>
+      <label for="btn-checkboxId3"></label>
+      <span class="checkbox_title">未选中-标题文字</span>
+    </div>
+    <div class="pre-checkbox">
+      <input id="btn-checkboxId4" class="btn-checkbox" type="checkbox" checked/>
+      <label for="btn-checkboxId4"></label>
+      <span class="checkbox_title">选中-标题文字</span>
+    </div>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="pre-checkbox">
+      <input id="" class="btn-checkbox" type="checkbox"/>
+      <label for=""></label>
+      <span class="checkbox_title">未选中-标题文字</span>
+    </div>
+    <div class="pre-checkbox">
+      <input id="" class="btn-checkbox" type="checkbox" checked/>
+      <label for=""></label>
+      <span class="checkbox_title">选中-标题文字</span>
+    </div>
+  </xmp>
+
+
+  <div class="check-boxs">
+    <div class="pre-checkbox">
+      <input id="btn-checkboxId5" class="btn-checkbox-minor-circle" type="checkbox"/>
+      <label for="btn-checkboxId5"></label>
+      <span class="checkbox_title">未选中-标题文字</span>
+    </div>
+    <div class="pre-checkbox">
+      <input id="btn-checkboxId6" class="btn-checkbox-minor-circle" type="checkbox" checked/>
+      <label for="btn-checkboxId6"></label>
+      <span class="checkbox_title">选中-标题文字</span>
+    </div>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="pre-checkbox">
+      <input id="" class="btn-checkbox-minor-circle" type="checkbox"/>
+      <label for=""></label>
+      <span class="checkbox_title">未选中-标题文字</span>
+    </div>
+    <div class="pre-checkbox">
+      <input id="" class="btn-checkbox-minor-circle" type="checkbox" checked/>
+      <label for=""></label>
+      <span class="checkbox_title">选中-标题文字</span>
+    </div>
+  </xmp>
+  <div class="check-boxs">
+    <div class="pre-checkbox">
+      <input id="btn-checkboxId7" class="btn-checkbox-circle" type="checkbox"/>
+      <label for="btn-checkboxId7"></label>
+      <span class="checkbox_title">未选中-标题文字</span>
+    </div>
+    <div class="pre-checkbox">
+      <input id="btn-checkboxId8" class="btn-checkbox-circle" type="checkbox" checked/>
+      <label for="btn-checkboxId8"></label>
+      <span class="checkbox_title">选中-标题文字</span>
+    </div>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="pre-checkbox">
+      <input id="" class="btn-checkbox-circle" type="checkbox"/>
+      <label for=""></label>
+      <span class="checkbox_title">未选中-标题文字</span>
+    </div>
+    <div class="pre-checkbox">
+      <input id="" class="btn-checkbox-circle" type="checkbox" checked/>
+      <label for=""></label>
+      <span class="checkbox_title">选中-标题文字</span>
+    </div>
+  </xmp>
+</div>
+<script src="../../common/run_prettify.js?amp;skin=sunburst" type="text/javascript"></script>
+</body>
+</html>

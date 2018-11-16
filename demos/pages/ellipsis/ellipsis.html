@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=EDGE">
+    <meta name="format-detection" content="telephone=no">
+    <title>ellipsis</title>
+  <script type="text/javascript" src="../../common/resize.js"></script>
+  <!--项目共用样式-->
+  <link rel="stylesheet" type="text/css" href="../../../dist/css/export_all.css"/>
+  <link rel="stylesheet" type="text/css" href="../../common/common.css"/>
+    <!--页面自实现样式-->
+    <link rel="stylesheet" type="text/css" href=""/>
+
+</head>
+<body>
+<div class="pre-page page-demo" id="page-demo">
+    <div class="pre-header">
+        <span class="back iconfont icon-angle-left" onclick="javascript:history.back();"></span>
+        <p class="text">ellipsis</p>
+        <span class="set"></span>
+    </div>
+    <div class="pre-ellipsis pre-list" style="margin-top: 0.2rem;">
+        [single line] code-prettify is An embeddable script that makes source-code snippets in HTML prettier.
+    </div>
+    <xmp class="prettyprint"  linenums>
+    <div class="pre-ellipsis pre-list">
+       [single line] code-prettify is An embeddable script that makes source-code snippets in HTML prettier.
+    </div>
+    </xmp>
+    <div class="pre-ellipsis pre-list">
+        [中文单行] 作为 CSS 的一种扩展，Less 不仅完全兼容 CSS 语法，而且连新增的特性也是使用 CSS 语法。这样的设计使得学习 Less 很轻松，而且你可以在任何时候回退到 CSS。
+    </div>
+    <xmp class="prettyprint"  linenums>
+    <div class="pre-ellipsis">
+        [中文单行] 作为 CSS 的一种扩展，Less 不仅完全兼容 CSS 语法，而且连新增的特性也是使用 CSS 语法。这样的设计使得学习 Less 很轻松，而且你可以在任何时候回退到 CSS。
+    </div>
+    </xmp>
+    <div class="pre-ellipsis3" style="line-height: 0.5rem;background-color: #fff;padding: 2px;">
+        [muti lines] React is a JavaScript library for creating user interfaces by Facebook and Instagram. Many people choose to think of React as the V in MVC.
+        We built React to solve one problem: building large applications with data that changes over time.
+    </div>
+    <xmp class="prettyprint"  linenums>
+    <div class="pre-ellipsis3">
+        [muti lines] React is a JavaScript library for creating user interfaces by Facebook and Instagram. Many people choose to think of React as the V in MVC.
+        We built React to solve one problem: building large applications with data that changes over time.
+    </div>
+    </xmp>
+    <pre class="prettyprint" linenums>
+    //备注: ellipsis 样式模块只对外暴露.pre-ellipsis()函数，
+    //需要在调用页面的样式文件中实例化（即：调用）
+
+    .pre-ellipsis{
+      .pre-ellipsis();
+    }
+
+    .pre-ellipsis3{
+      .pre-ellipsis(3);
+    }
+    </pre>
+
+
+</div>
+<script src="../../common/run_prettify.js?amp;skin=sunburst" type="text/javascript"></script>
+</body>
+</html>

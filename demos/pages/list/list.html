@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=EDGE">
+  <meta name="format-detection" content="telephone=no">
+  <title>list</title>
+  <script type="text/javascript" src="../../common/resize.js"></script>
+  <!--项目共用样式-->
+  <link rel="stylesheet" type="text/css" href="../../../dist/css/export_all.css"/>
+  <link rel="stylesheet" type="text/css" href="../../common/common.css"/>
+  <!--页面自实现样式-->
+  <link rel="stylesheet" type="text/css" href=""/>
+
+</head>
+<body>
+<div class="up-page page-demo" id="page-demo">
+  <div class="up-header">
+    <span class="back iconfont icon-angle-left" onclick="javascript:history.back();"></span>
+    <p class="text">list</p>
+    <span class="set"></span>
+  </div>
+  <div class="up-list" style="margin-top: 0.2rem;">
+    <p class="key">list without icon</p>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="up-list">
+      <p class="key">list without icon</p>
+    </div>
+  </xmp>
+
+  <div class="up-list">
+    <span class="key">list with icon</span><span class="iconfont right icon-angle-right"></span>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="up-list">
+      <p class="key">list with icon</p><span class="iconfont right icon-angle-right"></span>
+    </div>
+  </xmp>
+
+  <div class="up-list">
+    <span class="iconfont left icon-iconinfo"></span>
+    <span class="key">list with value and icon</span>
+    <span class="iconfont right icon-angle-right"></span>
+    <span class="value right">value(中文值)</span>
+  </div>
+  <xmp class="prettyprint" linenums>
+    //部分手机 文字偏上
+    <div class="up-list">
+      <span class="iconfont left icon-iconinfo"></span>
+      <span class="key">list with value and icon</span>
+      <span class="iconfont right icon-angle-right"></span>
+      <span class="value right">value(中文值)</span>
+    </div>
+  </xmp>
+
+  <div class="up-list">
+    <span class="iconfont icon-iconinfo"></span>
+    <span class="key">list with value and icon</span>
+    <div class="right">
+      <span class="value ">value(中文值)</span>
+      <span class="iconfont icon-angle-right"></span>
+    </div>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="up-list">
+      <span class="iconfont icon-iconinfo"></span>
+      <span class="key">list with value and icon</span>
+      <div class="right">
+        <span class="value ">value(中文值)</span>
+        <span class="iconfont icon-angle-right"></span>
+      </div>
+    </div>
+  </xmp>
+
+  <div class="up-list list-l">
+    <p class="key">large list</p>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="up-list list-l">
+      <span class="key">large list</span>
+    </div>
+  </xmp>
+
+  <div class="up-list list-s">
+    <p class="key">small list</p>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="up-list list-s">
+      <span class="key">small list</span>
+    </div>
+  </xmp>
+  <div class="up-list list-sx">
+    <p class="key">smaller list</p>
+  </div>
+  <xmp class="prettyprint" linenums>
+    <div class="up-list list-sx">
+      <span class="key">smaller list</span>
+    </div>
+  </xmp>
+  <pre class="prettyprint" linenums>
+    //list 对应尺寸
+    //large
+    @list-height-l: 0.9rem;
+    @list-fSize-l: 0.32rem;
+    //default
+    @list-height: 0.8rem;
+    @list-fSize: 0.28rem;
+    //small
+    @list-height-s: 0.6rem;
+    @list-fSize-s: 0.26rem;
+    //smaller
+    @list-height-sx: 0.5rem;
+    @list-fSize-sx: 0.24rem;
+    </pre>
+
+
+</div>
+<script src="../../cup/v1.0.0/zepto.js" type="text/javascript"></script>
+<script src="../../common/run_prettify.js?amp;skin=sunburst" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+//1rem*@default-ratio==100px
+
+@import "../common/vari";
+
+//basic style
+@button-bgColor: #ED171F;
+@button-bgColor-active: #589116;
+
+@button-bgColor-coupon: #fd3259;
+@button-bgColor-coupon-active: #c42544;
+
+@button-bgColor-inactive: #bcbcbc;
+@button-color: #fff;
+//basic size
+@button-width: 90%; //670/750=89.333333333333
+@button-height: 0.8rem*@default-ratio;
+@button-fSize: 0.36rem*@default-ratio;
+@button-radius: 0.06rem*@default-ratio;
+
+.button(@bgColor:@button-bgColor;@activeColor:@button-bgColor-active;@color:@button-color;) {
+  //basic style
+  display: block;
+  margin: 0.1rem*@default-ratio auto;
+  text-align: center;
+  font-weight: bold;
+  //dynamic style
+  .button-type();
+
+  //size
+  .button-size();
+}
+
+//color
+.button-type(@bgColor:@button-bgColor;@activeColor:@button-bgColor-active;@color:@button-color;){
+  background-color: @bgColor;
+  color: @color;
+  //active or focus style
+  &.active, &:active {
+    background-color: @activeColor;
+  }
+  //inactive or focus style
+  &.inactive, &:disabled {
+    background-color: @button-bgColor-inactive;
+  }
+}
+
+
+
+
+//large
+@button-height-l: 0.9rem*@default-ratio;
+@button-fSize-l: 0.38rem*@default-ratio;
+@button-radius-l: 0.06rem*@default-ratio;
+//small
+@button-height-s: 0.6rem*@default-ratio;
+@button-fSize-s: 0.3rem*@default-ratio;
+@button-radius-s: 0.06rem*@default-ratio;
+//size function
+.button-size(@height:@button-height;@fSize:@button-fSize;@radius:@button-radius;) {
+  //basic style
+  width: @button-width;
+  height: @height;
+  line-height: @height;
+  font-size: @fSize;
+  border-radius: @radius;
+}
+
+//exports your modules
+.ex-button(){
+  .button();//basic
+  &.button-l{
+    .button-size(@height:@button-height-l;@fSize:@button-fSize-l;@radius:@button-radius-l;)
+  }
+  &.button-s{
+    .button-size(@height:@button-height-s;@fSize:@button-fSize-s;@radius:@button-radius-s;)
+  }
+  //coupon
+  &.button-coupon{
+    .button-type(@bgColor:@button-bgColor-coupon;@activeColor:@button-bgColor-coupon-active;);
+  }
+}

@@ -1,0 +1,13 @@
+.demo-block .render {
+  position: relative;
+  max-width: 7.5rem;
+  margin: 0 auto;
+}
+.demo-block .code_block {
+  max-height: 0;
+}
+.demo-block .code_toggle {
+  text-align: center;
+  color: #20a0ff;
+  line-height: 40px;
+}

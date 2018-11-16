@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>animation created by xiaogang on 2018/8/17</title>
+  <!--项目共用样式-->
+  <script type="text/javascript" src="../../common/resize.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../dist/css/export_all.css"/>
+  <link rel="stylesheet" type="text/css" href="../../common/common.css"/>
+  <style type="text/css">
+    .animate {
+
+      transition: max-height 1s cubic-bezier(0.42, 0, 0.58, 1);
+
+      width: 80%;
+      margin: 0 auto;
+      max-height: 99px;
+      overflow: hidden;
+    }
+
+    .animate.open {
+      /*height: auto;*/
+      max-height: 100%;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="pre-page page-demo" id="page-demo">
+  <div class="pre-header">
+    <span class="back iconfont icon-common_arrow_left_la" onclick="javascript:history.back();"></span>
+    <p class="text">animation</p>
+    <span class="set"></span>
+  </div>
+
+  <div class="animate" id="animate">
+
+    每人每活动日限享1次优惠，每月限2次优惠。每个活动日限量1000名，活动期间名额共计26000笔，先到先得。
+
+    1.本活动通过平安口袋银行或云闪付APP二维码支付，客户须以除金通卡、花漾卡、烟草采购卡以外的卡号以“62”开头的平安银联信用卡消费方可享受优惠；支付方式仅限绑定实体卡为“62”开头银联卡（IC卡或磁条卡）的平安口袋银行或云闪付APP二维码支付；
+    2.本活动仅适用于浙江所有有扫码枪的1600多家十足便利店参与，可与商户打折、促销优惠活动共享，门店当值人员不可参加活动；
+    3.香烟、储值类商品不参加活动，使用代金券、储值卡后使用我行信用卡的消费金额如不满指定金额则不享受本活动优惠；
+    4.若同一持卡人发生拆单、虚假刷单等恶意行为，将取消优惠资格并不另行通知；
+    5.若出现因商户单方面原因导致发生的交易不能正常进行等影响持卡人无法参与活动的原因，如商户刷卡POS机故障，商户临时停业等，请持卡人与商户沟通解决；
+    6.在法律许可范围内，本次活动的规则如有调整或变更，以平安口袋银行APP公告为准。
+
+  </div>
+  <button id="toggle">toggle</button>
+</div>
+</body>
+<script src="../../common/zepto.js" type="text/javascript"></script>
+<script src="../../common/run_prettify.js?amp;skin=sunburst" type="text/javascript"></script>
+<script type="text/javascript">
+  $('#toggle').click(function () {
+    $('#animate').toggleClass('open');
+  });
+
+
+</script>
+</html>

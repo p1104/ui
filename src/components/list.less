@@ -1,0 +1,72 @@
+// 后续 list 全局替换 成 list
+//换算 1rem*@default-ratio == 100px
+
+@import "../common/vari";
+
+@list-color: #666;
+@list-bgColor: #fff;
+@list-padding: 0.3rem*@default-ratio;
+
+//size
+@list-height: 0.8rem*@default-ratio;
+@list-fSize: 0.28rem*@default-ratio;
+
+.list(@color:@list-color;@bgColor:@list-bgColor;@padding:@list-padding;) {
+  //basic style
+  //overflow:用来清除浮动 。 注掉 兼容性问题不大
+  overflow: hidden;
+  .key, .value {
+    display: inline-block;
+    //margin-left: 0.15rem*@default-ratio;
+    //float: left;
+  }
+  .iconfont {
+    width: 0.4rem*@default-ratio;
+    text-align: center;
+    display: inline-block;
+    &.left {
+      //margin-right: 0.15rem*@default-ratio;
+    }
+  }
+  //dynamic style
+  padding: 0 @padding;
+  color: @color;
+  background-color: @bgColor;
+  //size
+  .list-size();
+}
+
+//large
+@list-height-l: 0.9rem*@default-ratio;
+@list-fSize-l: 0.32rem*@default-ratio;
+
+//small
+@list-height-s: 0.6rem*@default-ratio;
+@list-fSize-s: 0.26rem*@default-ratio;
+
+//smaller
+@list-height-sx: 0.5rem*@default-ratio;
+@list-fSize-sx: 0.24rem*@default-ratio;
+
+.list-size(@height:@list-height;@fSize:@list-fSize;) {
+  height: @height;
+  line-height: @height;
+  font-size: @fSize;
+}
+
+//exports your module
+.ex-list() {
+  .list();
+  &.list-l {
+    .list-size(@list-height-l; @list-fSize-l;)
+  }
+  &.list-s {
+    .list-size(@list-height-s; @list-fSize-s;)
+  }
+  &.list-sx {
+    .list-size(@list-height-sx; @list-fSize-sx;)
+  }
+}
+
+//flex 版
+

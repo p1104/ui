@@ -1,0 +1,13 @@
+/**
+ * Created by xiaogang on 2018/8/9.
+ *
+ */
+.demos-border .pre-border,
+.demos-border .pre-border-top,
+.demos-border .pre-border-right,
+.demos-border .pre-border-bottom,
+.demos-border .pre-border-left {
+  text-align: center;
+  background-color: aliceblue;
+  height: 1rem;
+}

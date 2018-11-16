@@ -1,0 +1,23 @@
+/* override style */
+.CodeMirror {
+  font-family: 'source-code-pro', Menlo, 'Courier New', Consolas, monospace;
+  font-size: 13px;
+  line-height: 20px;
+  color: #484848;
+  padding: 15px 0;
+  border-right: 1px solid #eaeefb;
+  z-index: 0;
+  height: auto;
+  background: transparent;
+}
+.CodeMirror .CodeMirror-gutters {
+  background: transparent;
+  border-right: 0px;
+  z-index: 0;
+}
+.CodeMirror .CodeMirror-selected {
+  background: #E6EFFB;
+}
+.CodeMirror pre {
+  padding: 0 25px;
+}

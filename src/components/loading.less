@@ -1,0 +1,161 @@
+//换算 1rem*@default-ratio==100px
+@import "../common/vari";
+@import "./vertical";
+
+@loading-zIndex: 1104;
+@loading-width: 3.2rem*@default-ratio;
+@loading-padding: 0.72rem*@default-ratio 0;
+@loading-type-size: 0.84rem*@default-ratio;
+
+.loading () {
+  position: relative;
+  height: 100%; //自适应居中！
+  min-height: 3.3rem*@default-ratio; //默认高度！
+  .loading-mask {
+    .mask();
+
+    //type
+    .loading {
+      //任何类型 都需要居中处理
+      .ex-vertical(center);
+
+      text-align: center;
+      font-size: 0.3rem*@default-ratio;
+      line-height: 0.3rem*@default-ratio;
+
+      p {
+        margin-top: 0.48rem*@default-ratio;
+      }
+
+      //&.loading-gif {
+      //  .loading-type(gif);
+      //}
+      //&.loading-svg {
+      //  .loading-type(svg);
+      //}
+
+    }
+  }
+
+}
+
+//override size
+.loading-target() {
+  position: absolute;
+}
+
+//override type
+.loading-type(@type:gif;) {
+  width: @loading-width;
+  padding: @loading-padding;
+
+  .loading-type {
+    width: @loading-type-size;
+    height: @loading-type-size;
+  }
+  //调用 对应的 type
+  .type(@type);
+
+  //type 函数
+  .type(@type) when (default()) {
+    .type(gif);
+  }
+
+  //loading gif
+  .type(gif) {
+    background: #fff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 0.24rem*@default-ratio;
+
+    img {
+      width: @loading-type-size;
+      height: @loading-type-size;
+    }
+
+    .gif {
+      width: @loading-type-size;
+      height: @loading-type-size;
+
+      display: inline-block;
+      background: url("../img/loading/loading_circle.gif") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  //loading svg
+  .type(svg) {
+
+    svg {
+      width: @loading-type-size;
+      height: @loading-type-size;
+
+      animation: loading-rotate 2s linear infinite;
+    }
+    circle {
+      animation: loading-dash 1.5s ease-in-out infinite;
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
+      stroke: #20a0ff;
+      stroke-linecap: round;
+    }
+
+    @keyframes loading-rotate {
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    @keyframes loading-dash {
+      0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0
+      }
+
+      50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -40px
+      }
+
+      to {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -120px
+      }
+    }
+  }
+
+}
+
+//exports module
+.ex-loading() {
+  .loading();
+
+  //override full
+  &[full=false] {
+    .loading-mask {
+      .loading-target();
+    }
+  }
+
+  //override type
+  .loading-gif {
+    .loading-type(gif)
+  }
+  .loading-svg {
+    .loading-type(svg);
+  }
+
+}
+
+.mask() {
+  position: fixed;
+  z-index: @loading-zIndex;
+  background-color: rgba(0, 0, 0, .2);
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
