@@ -1,5 +1,5 @@
 ## use
-> **npm run cup**:命令生产 需要的样式文件包（dist 文件夹）。 
+> **npm run build**:命令生产 需要的样式文件包（dist 文件夹）。 
 
 > copy dist 样式文件包（建议放置到项目src的最外层目录下 :less）。
 
