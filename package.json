@@ -1,12 +1,11 @@
 {
-  "name": "base-ui-theme",
-  "version": "0.0.1",
+  "name": "pre-ui-theme",
+  "version": "0.0.4",
   "description": "component default theme.",
-  "main": "lib/index.css",
-  "style": "lib/index.css",
+  "main": "dist/css/export_all.css",
+  "style": "dist/css/export_all.css",
   "files": [
-    "lib",
-    "src"
+    "dist"
   ],
   "keywords": [
     "ui",
