@@ -13,7 +13,7 @@
  */
 
 
-const cacheName = 'sw_cache_cup_ui';
+const cacheName = 'sw_cache_pre_ui';
 /**
  * 需要缓存的 文件列表
  * @type {string[]}
